@@ -1,11 +1,17 @@
-const navbar = ({ siteUrl, repositoryName }) => ({
+// This is an issue with docusaurus's linking, to link to a relative path
+// not part of the SPA, you must prepend this prefix,
+// or React router will get confused to push the path inside SPA
+// https://github.com/facebook/docusaurus/issues/3309#issuecomment-678249433
+const externalPrefix = 'pathname://';
+
+const navbar = ({ repositoryName }) => ({
   logo: {
     alt: 'Zero Logo',
     src: 'img/zero.svg',
   },
   items: [
     {
-      href: `${siteUrl}/docs`,
+      href: `${externalPrefix}/docs`,
       label: 'Docs',
       className: 'header-docs-link header-logo-24',
       position: 'right'
@@ -25,12 +31,12 @@ const navbar = ({ siteUrl, repositoryName }) => ({
   ],
 });
 
-const footer = ({ siteUrl, repositoryName }) => ({
+const footer = ({ repositoryName }) => ({
   links: [
     {
       items: [
         {
-          href: `${siteUrl}/docs`,
+          href: `${externalPrefix}/docs`,
           label: 'Docs',
           className: 'header-docs-link header-logo-24',
           position: 'right'
@@ -52,12 +58,12 @@ const footer = ({ siteUrl, repositoryName }) => ({
   ],
 });
 
-const themeConfig = ({ siteUrl, repositoryName }) => ({
+const themeConfig = ({ repositoryName }) => ({
   colorMode: {
     defaultMode: 'dark',
   },
-  navbar: navbar({ siteUrl, repositoryName }),
-  footer: footer({ siteUrl, repositoryName }),
+  navbar: navbar({ repositoryName }),
+  footer: footer({ repositoryName }),
 });
 
 const misc = () => ({
