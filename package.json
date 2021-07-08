@@ -4,8 +4,15 @@
   "description": "Some shared elements of the documentation site, purpose is to reduce effort to make changes across modules",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "release": "release-it"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "release-it": "^14.10.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }
