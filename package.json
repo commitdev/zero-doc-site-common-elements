@@ -1,6 +1,6 @@
 {
   "name": "@commitdev/zero-doc-site-common-elements",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Some shared elements of the documentation site, purpose is to reduce effort to make changes across modules",
   "main": "index.js",
   "scripts": {
