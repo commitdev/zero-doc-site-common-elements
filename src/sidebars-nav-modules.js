@@ -15,7 +15,7 @@ module.exports = (config)=> ({
     },
     {
       type: 'link',
-      label: 'Frontend',
+      label: 'Frontend - React',
       href: `${config.url}/docs/modules/frontend-react`,
     },
     {
