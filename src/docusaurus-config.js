@@ -6,6 +6,7 @@ const navbar = ({ siteUrl, repositoryName }) => ({
   items: [
     {
       href: `${siteUrl}/docs`,
+      target: '_self',
       label: 'Docs',
       className: 'header-docs-link header-logo-24',
       position: 'right'
@@ -31,6 +32,7 @@ const footer = ({ siteUrl, repositoryName }) => ({
       items: [
         {
           href: `${siteUrl}/docs`,
+          target: '_self',
           label: 'Docs',
           className: 'header-docs-link header-logo-24',
           position: 'right'
