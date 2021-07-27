@@ -7,6 +7,7 @@ const {
   navbar,
   stylesheets,
   themeConfig,
+  gaTracking,
 } = require('./src/docusaurus-config');
 
 module.exports = {
@@ -19,6 +20,7 @@ module.exports = {
   navbar,
   stylesheets,
   misc,
+  gaTracking,
 
   //download common css file
   downloadCommonCustomCss,

@@ -55,12 +55,19 @@ const footer = ({ siteUrl, repositoryName }) => ({
 });
 
 const themeConfig = ({ siteUrl, repositoryName }) => ({
+  ...gaTracking(),
   colorMode: {
     defaultMode: 'dark',
   },
   navbar: navbar({ siteUrl, repositoryName }),
   footer: footer({ siteUrl, repositoryName }),
 });
+
+const gaTracking = () => ({
+  gtag: {
+    trackingID: 'G-6FN66NMDES',
+  },
+})
 
 const misc = () => ({
   onBrokenLinks: 'warn',
@@ -79,4 +86,5 @@ module.exports = {
   themeConfig,
   stylesheets,
   misc,
+  gaTracking,
 }
