@@ -2,6 +2,8 @@ const navbar = ({ siteUrl, repositoryName }) => ({
   logo: {
     alt: 'Zero Logo',
     src: 'img/zero.svg',
+    href: `${siteUrl}`,
+    target: '_self',
   },
   items: [
     {
